@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OVA Mecánica Industrial - Grado 6°</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      /* For improved legibility: larger base font and neutral/green palette */
+      :root{--main-green: #0a5a33; --muted-gray:#6b7280}
+      body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+    </style>
+</head>
+<body class="bg-gray-100 text-lg text-gray-800">
+
+<!-- Header -->
+<header class="bg-white shadow sticky top-0 z-20">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <!-- removed house logo as requested -->
+      <h1 class="text-3xl font-extrabold" style="color:var(--main-green);">OVA - Mecánica Industrial para grado (6°)</h1>
+    </div>
+    <div class="hidden sm:block text-sm text-gray-500">Material educativo OVA</div>
+  </div>
+  <!-- Tabs -->
+  <nav class="bg-gray-50 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex space-x-4 overflow-x-auto text-sm">
+        <button class="tab-button py-3 px-4 font-semibold text-green-700 border-b-2 border-green-700" data-target="home" onclick="changeTab(this,'home')">Principal</button>
+        <button class="tab-button py-3 px-4 font-semibold text-gray-600 hover:text-green-700" data-target="teoria" onclick="changeTab(this,'teoria')">Aprendizaje Teórico</button>
+        <button class="tab-button py-3 px-4 font-semibold text-gray-600 hover:text-green-700" data-target="bitacora" onclick="changeTab(this,'bitacora')">Bitácora</button>
+        <button class="tab-button py-3 px-4 font-semibold text-gray-600 hover:text-green-700" data-target="actividades" onclick="changeTab(this,'actividades')">Actividades Interactivas</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="max-w-6xl mx-auto px-6 py-8">
+
+  <!-- HOME / PRINCIPAL -->
+  <section id="home" class="tab-content block">
+    <div class="bg-white p-8 rounded-xl shadow">
+      <h2 class="text-4xl font-bold mb-4" style="color:var(--main-green);">¿Qué es la Mecánica Industrial?</h2>
+
+      <p class="mb-4">La <strong>Mecánica Industrial</strong> es la disciplina técnica y tecnológica que abarca el estudio, diseño, operación, mantenimiento y reparación de máquinas, herramientas y sistemas mecánicos empleados en procesos productivos. Abarca desde el entendimiento de fuerzas y movimientos hasta la selección de materiales, técnicas de unión, y la implementación de procedimientos seguros para trabajar en talleres e industrias.</p>
+
+      <h3 class="text-2xl font-semibold mt-6 mb-2">Descripción ampliada (para estudiantes)</h3>
+      <p class="mb-4">Piensa en la mecánica como el conjunto de conocimientos que permite crear y mantener las máquinas que hacen los trabajos más pesados o complejos: desde sujetar una pieza con una prensa hasta mecanizar un eje con un torno. En la escuela aprenderás a leer planos, usar herramientas, identificar partes de una máquina y seguir normas para no ponerte en riesgo.</p>
+
+      <h3 class="text-2xl font-semibold mt-6 mb-2">Descripción ampliada (para docentes)</h3>
+      <p class="mb-4">Para el docente, la Mecánica Industrial debe entenderse como un campo integrador que combina teoría y práctica: física aplicada (estática, dinámica), propiedades de materiales (ductilidad, tenacidad), tecnología del proceso (mecanizado, corte, lijado), y gestión del mantenimiento. La intervención pedagógica debe enlazar conceptos abstractos con actividades prácticas controladas que permitan construir significados técnicos y desarrollar competencias procedimentales y actitudinales.</p>
+
+      <h3 class="text-3xl font-bold mt-8" style="color:var(--main-green);">Historia y contexto histórico</h3>
+      <p class="mt-3">La mecánica tiene raíces remotas: las civilizaciones antiguas ya empleaban palancas, poleas y ruedas. Sin embargo, su consolidación como disciplina industrial ocurre con la <strong>Revolución Industrial (siglos XVIII-XIX)</strong>, cuando la mecanización, las máquinas de vapor y luego los motores eléctricos permitieron la producción en masa y la especialización de oficios. Al pasar al siglo XX y XXI, se incorporan procesos automatizados, control numérico (CNC), sensores y estrategias de mantenimiento predictivo, llevando la disciplina hacia lo que hoy llamamos <em>Industria 4.0</em>. En el aula, es valioso conectar estos hitos históricos con demostraciones prácticas y proyectos que muestren la evolución tecnológica.</p>
+
+      <h3 class="text-3xl font-bold mt-8" style="color:var(--main-green);">Funciones y propósitos de la Mecánica Industrial</h3>
+      <ul class="list-disc pl-6 mt-3 space-y-2">
+        <li><strong>Diseño y fabricación:</strong> crear piezas y sistemas que cumplan funciones específicas.</li>
+        <li><strong>Mantenimiento:</strong> asegurar la operatividad de equipos mediante inspecciones, reparaciones y lubricación.</li>
+        <li><strong>Optimización de procesos:</strong> mejorar la eficiencia y seguridad en las operaciones productivas.</li>
+        <li><strong>Formación técnica:</strong> desarrollar competencias en estudiantes para la inserción laboral o continuidad de estudios.</li>
+        <li><strong>Innovación y sostenibilidad:</strong> aplicar criterios de optimización energética y selección responsable de materiales.</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold mt-8 mb-2">Cómo se enseña: enfoque pedagógico</h3>
+      <p class="mb-4">En un OVA, la enseñanza de la mecánica debe combinar:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Explicaciones conceptuales</strong> (fuerza, torque, fricción) con ejemplos cotidianos.</li>
+        <li><strong>Demostraciones prácticas</strong> en el taller con supervisión docente.</li>
+        <li><strong>Actividades guiadas</strong> (bitácoras, proyectos por equipo, prácticas con rúbrica).</li>
+        <li><strong>Reflexión y seguridad</strong> (análisis de riesgos y procedimientos).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TEORÍA (Página separada en el sitio) -->
+  <section id="teoria" class="tab-content hidden">
+    <div class="bg-white p-8 rounded-xl shadow">
+      <h2 class="text-4xl font-bold mb-4" style="color:var(--main-green);">Aprendizaje Teórico — Contenidos ampliados</h2>
+
+      <!-- Normas y EPP -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold mb-2">Normas de seguridad y EPP (extenso)</h3>
+        <p class="mb-4">La prevención de riesgos es el eje de cualquier taller. Las normas no sólo son reglas: son protocolos que protegen la vida y la salud. El docente debe trabajar las normas con práctica repetida, simulacros y cuestionarios reflexivos.</p>
+
+        <div class="overflow-x-auto">
+          <table class="min-w-full bg-gray-50 border border-gray-200">
+            <thead class="bg-gray-200 text-left">
+              <tr>
+                <th class="py-3 px-4">EPP</th>
+                <th class="py-3 px-4">Definición</th>
+                <th class="py-3 px-4">Uso / Observaciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-t">
+                <td class="py-3 px-4 font-semibold">Overol</td>
+                <td class="py-3 px-4">Prenda que cubre el cuerpo y evita que la ropa quede suelta o expuesta a virutas, aceites y chispas.</td>
+                <td class="py-3 px-4">Usar siempre abrochado y sin dobladillos; material preferible: algodón resistente o tejido retardante.</td>
+              </tr>
+              <tr class="border-t">
+                <td class="py-3 px-4 font-semibold">Botas de seguridad</td>
+                <td class="py-3 px-4">Calzado con puntera reforzada y suela antideslizante.</td>
+                <td class="py-3 px-4">Obligatorias en operaciones con piezas pesadas o manipulación de herramientas; revisar suela y limpieza.</td>
+              </tr>
+              <tr class="border-t">
+                <td class="py-3 px-4 font-semibold">Gafas/Protector facial</td>
+                <td class="py-3 px-4">Protección ocular de policarbonato; la pantalla facial protege frente a chispas.</td>
+                <td class="py-3 px-4">Indispensable en amolado, corte y soldadura (además usar protector facial si hay proyecciones fuertes).</td>
+              </tr>
+              <tr class="border-t">
+                <td class="py-3 px-4 font-semibold">Tapones/orejeras</td>
+                <td class="py-3 px-4">Protección auditiva para reducir exposición a ruidos continuos.</td>
+                <td class="py-3 px-4">Usar cuando el nivel de ruido supera 85 dB; enseñar a los estudiantes a medir ruido y planear descansos auditivos.</td>
+              </tr>
+              <tr class="border-t">
+                <td class="py-3 px-4 font-semibold">Guantes</td>
+                <td class="py-3 px-4">Guantes según la tarea: cuero para soldadura, engomados para agarre, nitrilo para químicos.</td>
+                <td class="py-3 px-4">No usar guantes con máquinas rotatorias; utilízalos en manipulación estática o corte manual seguro.</td>
+              </tr>
+              <tr class="border-t">
+                <td class="py-3 px-4 font-semibold">Cofia (recogecabello)</td>
+                <td class="py-3 px-4">Gorro que contiene el cabello para evitar que caiga sobre máquinas.</td>
+                <td class="py-3 px-4">Obligatorio para todo personal con cabello largo; enseñar su colocación correcta.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4 class="mt-6 font-semibold">Procedimientos básicos de seguridad (checklist para el docente)</h4>
+        <ol class="list-decimal pl-6 space-y-2 mt-2">
+          <li>Revisión del área: piso limpio y libre de virutas o líquidos.</li>
+          <li>Verificación de guardas y dispositivos de seguridad en máquinas.</li>
+          <li>Confirmación de EPP en cada estudiante antes de la sesión.</li>
+          <li>Explicación y demostración de procedimientos antes de permitir la práctica.</li>
+          <li>Asignación de roles y rutas de evacuación en caso de emergencia.</li>
+        </ol>
+      </div>
+
+      <!-- Definición de máquina y funciones -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold mb-2">Definición de "Máquina" y funciones</h3>
+        <p class="mb-4">Una <strong>máquina</strong> es un conjunto de elementos articulados que transforman energía y movimiento para realizar trabajo. En el contexto industrial, las máquinas permiten multiplicar fuerzas, orientar movimientos y obtener precisión en la fabricación.</p>
+        <p class="mb-4"><strong>Funciones principales de las máquinas:</strong> transmitir movimiento, transformar velocidad/torque, sujetar piezas, cortar o dar forma a materiales, medir y controlar procesos.</p>
+
+        <h4 class="font-semibold mt-4">Cuadro comparativo: máquinas simples y compuestas</h4>
+        <div class="overflow-x-auto mt-2">
+          <table class="min-w-full bg-gray-50 border border-gray-200">
+            <thead class="bg-gray-200 text-left">
+              <tr>
+                <th class="py-3 px-4">Característica</th>
+                <th class="py-3 px-4">Máquina Simple</th>
+                <th class="py-3 px-4">Máquina Compuesta</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-t">
+                <td class="py-3 px-4 font-semibold">Definición</td>
+                <td class="py-3 px-4">Dispositivo que proporciona ventaja mecánica con un solo principio (palanca, polea, tornillo).</td>
+                <td class="py-3 px-4">Combinación de máquinas simples que realizan tareas complejas (tornos, prensas automáticas).</td>
+              </tr>
+              <tr class="border-t">
+                <td class="py-3 px-4 font-semibold">Ejemplos</td>
+                <td class="py-3 px-4">Palanca, polea, tornillo, rueda y eje.</td>
+                <td class="py-3 px-4">Torno, fresadora, prensa hidráulica, taladro de columna.</td>
+              </tr>
+              <tr class="border-t">
+                <td class="py-3 px-4 font-semibold">Ventaja</td>
+                <td class="py-3 px-4">Simplicidad y facilidad de mantenimiento.</td>
+                <td class="py-3 px-4">Mayor capacidad, precisión y multiplicación de funciones.</td>
+              </tr>
+              <tr class="border-t">
+                <td class="py-3 px-4 font-semibold">Aplicación</td>
+                <td class="py-3 px-4">Trabajos manuales y acciones puntuales.</td>
+                <td class="py-3 px-4">Producción industrial, mecanizado y procesos continuos.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Herramientas: 20 con definiciones -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold mb-2">Herramientas comunes en el taller (20 con definiciones)</h3>
+        <p class="mb-4">A continuación se listan 20 herramientas fundamentales que todo estudiante de mecánica debe conocer: nombre, uso y recomendaciones.</p>
+
+        <ol class="list-decimal pl-6 space-y-3">
+          <li><strong>Mazo de goma:</strong> Martillo con cabeza de goma. Uso: golpear piezas sin dañar la superficie (alineado y montaje).</li>
+          <li><strong>Martillo de peña:</strong> Cabeza ancha para trabajo de forja y golpes fuertes controlados.</li>
+          <li><strong>Martillo de bola (bola de garrocha):</strong> Para dar forma o remover material en superficies cóncavas o dar acabados.</li>
+          <li><strong>Martillo de carpintero / de cabeza plana:</strong> Uso general para montaje y ajuste.</li>
+          <li><strong>Lima plana:</strong> Herramienta de desbaste para aplanar o alisar superficies planas.</li>
+          <li><strong>Lima triangular:</strong> Especial para ranuras y esquinas internas (triangulares).</li>
+          <li><strong>Escuadra metálica:</strong> Instrumento para verificar ángulos rectos y como guía de trazado.</li>
+          <li><strong>Pie de rey (calibrador vernier):</strong> Instrumento de medición de precisión para diámetros y profundidades.</li>
+          <li><strong>Hombre solo (palanca manual / palanqueta):</strong> Barra de palanca para forzar desmontajes o mover piezas pesadas; siempre con control y protección.</li>
+          <li><strong>Brocas:</strong> Puntas de corte para taladrar agujeros; elegir por material y diámetro.</li>
+          <li><strong>Destornillador de estrella (Phillips):</strong> Para tornillos con cabeza en cruz; prevenir deslizamientos con mango adecuado.</li>
+          <li><strong>Destornillador de pala (plano):</strong> Para tornillos de ranura; usar tamaño correcto para evitar dañar la cabeza.</li>
+          <li><strong>Llave fija:</strong> Se usa para apretar o aflojar tuercas y tornillos; tamaño fijo.</li>
+          <li><strong>Llave ajustable (inglesa):</strong> Llave con mordaza regulable para diferentes tamaños de tuerca.</li>
+          <li><strong>Llave combinada:</strong> Llave con boca abierta en un extremo y corona en el otro; útil y versátil.</li>
+          <li><strong>Pinza (alicates):</strong> Para sujetar, torcer o cortar alambres y piezas pequeñas.</li>
+          <li><strong>Tenaza:</strong> Herramienta para sujetar piezas con fuerte presión; usada en forja y soldadura.</li>
+          <li><strong>Sargentos / Prensas manuales:</strong> Sujetan piezas en bancos de trabajo para aserrar, pegar o taladrar.</li>
+          <li><strong>Sierra manual para metal:</strong> Hoja dentada en arco para cortar barras y perfiles metálicos.</li>
+          <li><strong>Escoplo / cincel:</strong> Para cortar o dar forma por golpe; siempre usar con martillo adecuado.</li>
+        </ol>
+
+        <p class="mt-4 text-sm text-gray-600">(Sugerencia docente: preparar fichas impresas con cada herramienta para que los estudiantes las identifiquen físicamente en el taller)</p>
+      </div>
+
+      <!-- Prensa y Torno: partes y funciones -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold mb-2">Prensa de banco — descripción, función, importancia y partes</h3>
+        <p class="mb-4">La prensa de banco (también llamada tornillo de banco o «vise" en inglés) es una herramienta estacionaria que sujeta firmemente una pieza de trabajo. Es indispensable para trabajos manuales: limado, serrado, lijado y pequeñas operaciones de montaje.</p>
+        <h4 class="font-semibold">Importancia pedagógica</h4>
+        <p class="mb-4">Sirve para enseñar conceptos de sujeción, seguridad y aplicación de fuerzas. Permite que los estudiantes realicen operaciones con ambas manos libres y con la pieza inmovilizada, reduciendo riesgos.</p>
+
+        <h4 class="font-semibold mt-4">Partes y definiciones</h4>
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong>Base:</strong> Estructura sólida que se ancla al banco de trabajo y soporta toda la prensa.</li>
+          <li><strong>Mordaza fija:</strong> Parte inmóvil que sirve como punto de apoyo para la pieza.</li>
+          <li><strong>Mordaza móvil:</strong> Parte que se desplaza para cerrar y apretar la pieza contra la mordaza fija.</li>
+          <li><strong>Husillo / Tornillo de apriete:</strong> Varilla roscada que al girar mueve la mordaza móvil; convierte el giro en movimiento lineal con elevado par mecánico.</li>
+          <li><strong>Manivela / Asa:</strong> Palanca que se usa para girar el husillo y apretar la mordaza.</li>
+          <li><strong>Guías / Carriles:</strong> Superficies que aseguran el movimiento rectilíneo de la mordaza móvil.</li>
+          <li><strong>Mordazas intercambiables:</strong> Revestimientos o topes que protegen la pieza y permiten mayor agarre sin dañarla.</li>
+        </ul>
+      </div>
+
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold mb-2">Torno — descripción, función, importancia y partes</h3>
+        <p class="mb-4">El torno es una máquina herramienta cuya función principal es mecanizar piezas de revolución (cilíndricas). Se utiliza para tornear ejes, realizar roscas, hacer refrentados y cortes de precisión. En el taller escolar sirve para enseñar control dimensional, avances, velocidades de corte y seguridad alrededor de piezas giratorias.</p>
+
+        <h4 class="font-semibold mt-4">Partes y definición</h4>
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong>Cabezal (o bancada del husillo):</strong> Contiene el motor y el sistema de transmisión que hace girar la pieza.</li>
+          <li><strong>Plato o Mandril:</strong> Dispositivo que sujeta la pieza en el husillo.</li>
+          <li><strong>Contrapunto:</strong> Apoyo móvil que sujeta el extremo de la pieza para trabajos largos o finos.</li>
+          <li><strong>Carro longitudinal:</strong> Soporta y desplaza la herramienta a lo largo del eje de la pieza.</li>
+          <li><strong>Carro transversal:</strong> Permite el avance de la herramienta perpendicular al eje para cortes de profundidad.</li>
+          <li><strong>Portaherramientas / Torreta:</strong> Donde se monta la herramienta de corte; puede cambiarse según la operación.</li>
+          <li><strong>Husillo:</strong> Eje que gira y transmite movimiento al mandril.</li>
+          <li><strong>Husillo del carro:</strong> Mecanismo que controla los avances y roscas.</li>
+        </ul>
+
+        <h4 class="font-semibold mt-4">Consejos de uso y seguridad</h4>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Siempre retirar herramientas de ajuste antes de encender el torno.</li>
+          <li>No usar guantes cerca de la pieza en rotación.</li>
+          <li>Proteger a los estudiantes con pantallas y manteniendo distancia de seguridad.</li>
+          <li>Comenzar a baja velocidad para piezas desbalanceadas.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BITÁCORA -->
+  <section id="bitacora" class="tab-content hidden">
+    <div class="bg-white p-8 rounded-xl shadow">
+      <h2 class="text-3xl font-bold mb-4" style="color:var(--main-green);">Bitácora de Actividades</h2>
+      <p class="mb-4">Registra aquí tus prácticas: título, fecha, objetivos, materiales, pasos y observaciones de seguridad. La bitácora ayuda a evaluar la progresión del estudiante y a documentar evidencias.</p>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-6">
+        <label class="block mb-2 font-semibold">Título de la actividad</label>
+        <input id="bitacora-titulo" class="w-full p-3 border border-gray-300 rounded-lg mb-3" placeholder="Ej: Torneado de eje 12 mm" />
+        <label class="block mb-2 font-semibold">Descripción </label>
+        <textarea id="bitacora-descripcion" rows="4" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Paso 1, paso 2..."></textarea>
+        <div class="flex gap-3 mt-3">
+          <button onclick="addBitacoraTask()" class="bg-green-700 text-white px-4 py-2 rounded-lg">Añadir</button>
+          <button onclick="document.getElementById('bitacora-titulo').value='';document.getElementById('bitacora-descripcion').value='';" class="bg-gray-300 px-4 py-2 rounded-lg">Limpiar</button>
+        </div>
+      </div>
+
+      <div id="bitacora-list" class="space-y-4">
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVIDADES -->
+  <section id="actividades" class="tab-content hidden">
+    <div class="bg-white p-8 rounded-xl shadow">
+      <h2 class="text-3xl font-bold mb-4" style="color:var(--main-green);">Actividades Interactivas ampliadas</h2>
+
+      <!-- Quiz -->
+      <div class="mb-8 bg-gray-50 p-6 rounded-lg border border-gray-200">
+        <h3 class="text-2xl font-semibold mb-3">Quiz de Conocimientos (10 preguntas)</h3>
+        <form id="quiz-form" class="space-y-3"></form>
+        <div class="flex gap-3 mt-4">
+          <button onclick="submitQuiz()" class="bg-green-700 text-white px-4 py-2 rounded-lg">Ver resultado total</button>
+          <div id="quiz-result" class="text-xl font-bold self-center"></div>
+        </div>
+      </div>
+
+      <!-- Escenario Drag & Drop -->
+      <div class="mb-8 bg-gray-50 p-6 rounded-lg border border-gray-200">
+        <h3 class="text-2xl font-semibold mb-3">Protocolo de seguridad — Ordenar pasos</h3>
+        <p class="mb-3">Arrastra los pasos para ordenar el protocolo ante una emergencia común en taller.</p>
+        <div class="grid md:grid-cols-2 gap-4">
+          <ul id="available-steps" class="p-3 bg-white rounded-lg min-h-[220px] border border-gray-200"></ul>
+          <ul id="correct-order" class="p-3 bg-white rounded-lg min-h-[220px] border-2 border-dashed border-green-300"></ul>
+        </div>
+        <div class="mt-4 flex gap-3">
+          <button onclick="checkScenarioOrder()" class="bg-green-700 text-white px-4 py-2 rounded-lg">Verificar</button>
+          <button onclick="initializeScenario()" class="bg-gray-300 px-4 py-2 rounded-lg">Reiniciar</button>
+        </div>
+      </div>
+
+      <!-- Dibujo y recuadros rellenables para prensa -->
+      <div class="mb-8 bg-gray-50 p-6 rounded-lg border border-gray-200">
+        <h3 class="text-2xl font-semibold mb-3">Dibujo y etiquetado de la Prensa de Banco</h3>
+        <p class="mb-3">Dibuja la prensa y luego completa las definiciones en los recuadros. El docente encontrará la respuesta modelo en el manual.</p>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bg-white p-3 rounded-lg border border-gray-200">
+            <canvas id="drawingCanvas" class="w-full h-64 rounded-lg border border-gray-300"></canvas>
+            <div class="mt-2 flex gap-2">
+              <button onclick="clearCanvas()" class="bg-red-500 text-white px-3 py-2 rounded-lg">Borrar</button>
+            </div>
+          </div>
+          <div class="mb-8 bg-gray-50 p-6 rounded-lg border border-gray-200">
+  <h3 class="text-2xl font-semibold mb-3">Unir Partes de la Prensa — Definición y Función</h3>
+  <p class="mb-3">Arrastra cada <strong>parte de la prensa</strong> hacia su <strong>definición y función correcta</strong>. Luego presiona "Verificar".</p>
+
+  <div class="grid md:grid-cols-3 gap-4">
+    <!-- Column 1: Parts -->
+    <div>
+      <h4 class="font-bold mb-2">Partes</h4>
+      <ul id="press-parts" class="p-3 bg-white rounded border border-gray-300 min-h-[200px]">
+      </ul>
+    </div>
+
+    <!-- Column 2: Definitions -->
+    <div>
+      <h4 class="font-bold mb-2">Definiciones</h4>
+      <ul id="press-defs" class="p-3 bg-white rounded border border-gray-300 min-h-[200px]">
+      </ul>
+    </div>
+
+    <!-- Column 3: Functions -->
+    <div>
+      <h4 class="font-bold mb-2">Funciones</h4>
+      <ul id="press-funcs" class="p-3 bg-white rounded border border-gray-300 min-h-[200px]">
+      </ul>
+    </div>
+  </div>
+
+  <button onclick="checkPressMatch()" class="mt-4 bg-green-700 text-white px-4 py-2 rounded">Verificar</button>
+  <div id="press-result" class="mt-3 font-semibold"></div>
+</div>
+
+<script>
+// DATA
+const pressParts = [
+  "Mordaza fija",
+  "Mordaza móvil",
+  "Husillo / Tornillo",
+  "Base",
+  "Manivela"
+];
+
+const pressDefs = {
+  "Mordaza fija": "Superficie inmóvil que sostiene la pieza.",
+  "Mordaza móvil": "Se mueve para ajustar y apretar la pieza.",
+  "Husillo / Tornillo": "Convierte el giro en movimiento lineal.",
+  "Base": "Parte que fija la prensa al banco de trabajo.",
+  "Manivela": "Palanca que se gira para mover el husillo."
+};
+
+const pressFuncs = {
+  "Mordaza fija": "Mantiene la pieza estable y alineada.",
+  "Mordaza móvil": "Aprieta la pieza contra la fija para inmovilizarla.",
+  "Husillo / Tornillo": "Multiplica la fuerza y cierra las mordazas.",
+  "Base": "Evita movimientos no deseados durante el trabajo.",
+  "Manivela": "Aplica torque para generar presión."
+};
+
+// Build UI
+function buildPressActivity() {
+  const p = document.getElementById("press-parts");
+  const d = document.getElementById("press-defs");
+  const f = document.getElementById("press-funcs");
+
+  // Clear
+  p.innerHTML = "";
+  d.innerHTML = "";
+  f.innerHTML = "";
+
+  // Shuffle helper
+  const shuffle = arr => arr.sort(() => Math.random() - 0.5);
+
+  // Add draggable items
+  shuffle([...pressParts]).forEach((x, i) => addDragItem(p, x, "part-" + i));
+  shuffle(Object.values(pressDefs)).forEach((x, i) => addDragItem(d, x, "def-" + i));
+  shuffle(Object.values(pressFuncs)).forEach((x, i) => addDragItem(f, x, "func-" + i));
+
+  // Enable droppable lists
+  [p, d, f].forEach(list => {
+    list.addEventListener("dragover", e => e.preventDefault());
+    list.addEventListener("drop", e => {
+      e.preventDefault();
+      const id = e.dataTransfer.getData("text/plain");
+      const el = document.getElementById(id);
+      if (el) list.appendChild(el);
+    });
+  });
+}
+
+// Create draggable element
+function addDragItem(container, text, id) {
+  const li = document.createElement("li");
+  li.className = "p-2 bg-white border rounded mb-2 cursor-grab";
+  li.innerText = text;
+  li.id = id;
+  li.draggable = true;
+  li.addEventListener("dragstart", e => {
+    e.dataTransfer.setData("text/plain", e.target.id);
+  });
+  container.appendChild(li);
+}
+
+// Verify order
+function checkPressMatch() {
+  let correct = 0;
+
+  const p = document.getElementById("press-parts").children;
+  const d = document.getElementById("press-defs").children;
+  const f = document.getElementById("press-funcs").children;
+
+  if (p.length !== 5 || d.length !== 5 || f.length !== 5) {
+    document.getElementById("press-result").innerText = 
+      "Debes usar las tres columnas completas antes de verificar.";
+    return;
+  }
+
+  for (let i = 0; i < 5; i++) {
+    const part = p[i].innerText;
+    const def = d[i].innerText;
+    const fun = f[i].innerText;
+
+    if (pressDefs[part] === def && pressFuncs[part] === fun) correct++;
+  }
+
+  document.getElementById("press-result").innerText = 
+    "Coincidencias correctas: " + correct + " / 5";
+}
+
+// Initialize after load
+window.addEventListener("load", buildPressActivity);
+</script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="text-center text-sm text-gray-600 py-4">
+@Objetivo Virtual de Aprendizaje 2025 – Juan Diego Rico Buitrago  
+<br/>
+Actividad para recuperación de horas
+</footer>
+
+<script>
+// Navigation logic
+function changeTab(el,target){
+  document.querySelectorAll('.tab-button').forEach(b=>{b.classList.remove('border-green-700');b.classList.remove('text-green-700');b.classList.add('text-gray-600');});
+  document.querySelectorAll('.tab-content').forEach(s=>s.classList.add('hidden'));
+  el.classList.add('border-green-700'); el.classList.add('text-green-700');
+  document.getElementById(target).classList.remove('hidden');
+  // initialize interactive sections when shown
+  if(target==='actividades'){
+    initializeQuiz(); initializeScenario(); initializeCanvas();
+  }
+}
+
+// Bitacora placeholder functions (previous firebase code integrated in original file; here we provide local fallback)
+function addBitacoraTask(){
+  const t=document.getElementById('bitacora-titulo').value.trim();
+  const d=document.getElementById('bitacora-descripcion').value.trim();
+  if(!t||!d){ alert('Debe ingresar título y descripción'); return; }
+  const list=document.getElementById('bitacora-list');
+  const card=document.createElement('div'); card.className='bg-white p-4 rounded-lg border border-gray-200';
+  card.innerHTML=`<div class=\"flex justify-between items-start\"><div><h4 class=\"font-semibold\">${t}</h4><p class=\"text-sm text-gray-600\">${d}</p></div><div><button onclick=\"this.parentElement.parentElement.remove()\" class=\"text-red-600 font-semibold\">Eliminar</button></div></div>`;
+  list.prepend(card);
+  document.getElementById('bitacora-titulo').value=''; document.getElementById('bitacora-descripcion').value='';
+}
+
+// --- QUIZ ---
+const quizQuestions = [
+  {
+    q: "Una pieza queda mal sujeta en la prensa y el estudiante comienza a limar. ¿Cuál es el riesgo principal y por qué ocurre?",
+    a: "La pieza puede salir despedida por vibración acumulada",
+    options: [
+      "La pieza puede deformarse por presión",
+      "El limado se vuelve más lento",
+      "La pieza puede salir despedida por vibración acumulada",
+      "No hay riesgo real si el estudiante es cuidadoso"
+    ]
+  },
+  {
+    q: "Si al usar el torno la herramienta vibra, ¿qué indica esto?",
+    a: "Falta de sujeción, velocidad incorrecta o herramienta desafilada",
+    options: [
+      "Que la pieza está muy fría",
+      "Falta de sujeción, velocidad incorrecta o herramienta desafilada",
+      "Que el motor está dañado",
+      "Que la herramienta es demasiado nueva"
+    ]
+  },
+  {
+    q: "Un estudiante decide usar guantes cerca del torno. ¿Por qué esto incrementa el riesgo?",
+    a: "El guante puede engancharse y arrastrar la mano con la pieza giratoria",
+    options: [
+      "El guante reduce la precisión",
+      "El guante puede engancharse y arrastrar la mano con la pieza giratoria",
+      "El guante puede romperse",
+      "El guante se ensucia"
+    ]
+  },
+  {
+    q: "¿Por qué la lectura incorrecta de un plano puede producir una pieza inservible?",
+    a: "Porque una sola cota mal interpretada afecta el ajuste funcional de la pieza",
+    options: [
+      "Porque los planos siempre cambian",
+      "Porque no afecta realmente",
+      "Porque una sola cota mal interpretada afecta el ajuste funcional de la pieza",
+      "Porque los planos son solo guías generales"
+    ]
+  },
+  {
+    q: "¿Qué indica un sonido irregular en el torno durante el mecanizado?",
+    a: "Problema de alineación, herramienta desafilada o avance incorrecto",
+    options: [
+      "Exceso de refrigerante",
+      "Motor nuevo",
+      "Problema de alineación, herramienta desafilada o avance incorrecto",
+      "Poca iluminación"
+    ]
+  },
+  {
+    q: "¿Cuál es el principal motivo técnico para NO usar una lima sobre una pieza en rotación?",
+    a: "La lima puede atraparse entre la pieza y causar una lesión grave",
+    options: [
+      "La lima se desgasta más rápido",
+      "La lima puede atraparse entre la pieza y causar una lesión grave",
+      "Es muy cansado",
+      "No hay diferencia"
+    ]
+  },
+  {
+    q: "Si dos herramientas producen el mismo resultado, ¿qué criterio técnico se usa para elegir la más adecuada?",
+    a: "Precisión, seguridad y menor riesgo de daño al material",
+    options: [
+      "La que se vea más nueva",
+      "La que sea más barata",
+      "Precisión, seguridad y menor riesgo de daño al material",
+      "La que el estudiante prefiera"
+    ]
+  },
+  {
+    q: "Si una máquina empieza a oler a quemado, ¿cuál debe ser la acción inmediata y por qué?",
+    a: "Detener la máquina para evitar un daño mayor o incendio",
+    options: [
+      "Ignorar y seguir porque es normal",
+      "Avisar después de terminar la pieza",
+      "Detener la máquina para evitar un daño mayor o incendio",
+      "Echar agua rápidamente"
+    ]
+  },
+  {
+    q: "¿Por qué es importante revisar la rigidez del banco antes de usar la prensa?",
+    a: "Si el banco vibra o es débil, la fuerza puede provocar desprendimientos peligrosos",
+    options: [
+      "Para que no se raye",
+      "Para que el trabajo quede más bonito",
+      "Si el banco vibra o es débil, la fuerza puede provocar desprendimientos peligrosos",
+      "No es importante"
+    ]
+  },
+  {
+    q: "Una broca se recalienta durante el taladrado, ¿qué indica?",
+    a: "Velocidad excesiva, falta de lubricación o presión incorrecta",
+    options: [
+      "Que la broca es vieja",
+      "Velocidad excesiva, falta de lubricación o presión incorrecta",
+      "Que debe cambiarse por una de madera",
+      "Que el taladro no sirve"
+    ]
+  }
+];
+
+function initializeQuiz(){
+  const form=document.getElementById('quiz-form'); form.innerHTML='';
+  quizQuestions.forEach((item,i)=>{
+    const div=document.createElement('div'); div.className='bg-white p-3 rounded border border-gray-200';
+    const q=document.createElement('p'); q.className='font-semibold mb-2'; q.innerText=(i+1)+'. '+item.q;
+    div.appendChild(q);
+    const opts=[...item.options].sort(()=>Math.random()-0.5);
+    opts.forEach(opt=>{
+      const label=document.createElement('label'); label.className='flex items-center gap-2 mb-1';
+      label.innerHTML=`<input type=\"radio\" name=\"q${i}\" value=\"${opt}\"> <span>${opt}</span>`;
+      div.appendChild(label);
+    });
+    form.appendChild(div);
+  });
+  document.getElementById('quiz-result').innerText='';
+}
+
+function submitQuiz(){
+  let score=0;
+  quizQuestions.forEach((item,i)=>{
+    const sel=document.querySelector(`input[name=\"q${i}\"]:checked`);
+    if(sel && sel.value===item.a) score++;
+  });
+  document.getElementById('quiz-result').innerText=`Resultado total: ${score} / ${quizQuestions.length}`;
+  showModal('Resultado', `Obtuviste ${score} de ${quizQuestions.length}`,'green-500');
+}
+
+// --- SCENARIO DRAG & DROP ---
+const scenarioSteps = [
+  'Detener inmediatamente la máquina involucrada',
+  'Evitar que el lesionado se frote la zona afectada',
+  'Avisar al docente o encargado del taller',
+  'Trasladar a primeros auxilios / lavar con agua abundante',
+  'Si persiste, acudir a servicio médico',
+  'Registrar el incidente en la bitácora y reflexionar sobre medidas preventivas'
+];
+
+function initializeScenario(){
+  const avail=document.getElementById('available-steps'); const corr=document.getElementById('correct-order');
+  avail.innerHTML=''; corr.innerHTML='';
+  const shuffled=[...scenarioSteps].sort(()=>Math.random()-0.5);
+  shuffled.forEach((s,idx)=>{
+    const li=document.createElement('li'); li.className='p-2 bg-white rounded shadow mb-2 cursor-grab'; li.draggable=true; li.id='s'+idx; li.innerText=s;
+    li.addEventListener('dragstart', e=>{ e.dataTransfer.setData('text/plain', e.target.id); setTimeout(()=>li.classList.add('opacity-50'),0); });
+    li.addEventListener('dragend', ()=>li.classList.remove('opacity-50'));
+    avail.appendChild(li);
+  });
+  [avail,corr].forEach(c=>{ c.addEventListener('dragover', e=>e.preventDefault()); c.addEventListener('drop', e=>{ e.preventDefault(); const id=e.dataTransfer.getData('text/plain'); const el=document.getElementById(id); if(el) e.currentTarget.appendChild(el); }); });
+}
+
+function checkScenarioOrder(){
+  const corr=document.getElementById('correct-order'); const items=Array.from(corr.children).map(n=>n.innerText.trim());
+  if(items.length!==scenarioSteps.length){ showModal('Incompleto','Debe ordenar todos los pasos','yellow-500'); return; }
+  let ok=true; for(let i=0;i<scenarioSteps.length;i++){ if(items[i]!==scenarioSteps[i]){ ok=false; break; } }
+  showModal(ok?'Protocolo correcto':'Revisar orden',' '+(ok?'Has colocado los pasos correctamente.':'El orden tiene errores. Repasa la secuencia.'), ok?'green-500':'red-500');
+}
+
+// --- CANVAS DRAWING ---
+let canvas,ctx,isDrawing=false,lastX=0,lastY=0;
+function initializeCanvas(){
+  canvas=document.getElementById('drawingCanvas'); if(!canvas) return;
+  ctx=canvas.getContext('2d');
+  function resize(){ const w=canvas.clientWidth; canvas.width=w; canvas.height=w*0.6; clearCanvas(false); }
+  resize(); window.addEventListener('resize', resize);
+  ctx.strokeStyle='#1f6e3f'; ctx.lineWidth=3; ctx.lineCap='round';
+  canvas.onpointerdown=(e)=>{ isDrawing=true; const r=canvas.getBoundingClientRect(); lastX=e.clientX-r.left; lastY=e.clientY-r.top; };
+  canvas.onpointermove=(e)=>{ if(!isDrawing) return; const r=canvas.getBoundingClientRect(); const x=e.clientX-r.left; const y=e.clientY-r.top; ctx.beginPath(); ctx.moveTo(lastX,lastY); ctx.lineTo(x,y); ctx.stroke(); lastX=x; lastY=y; };
+  canvas.onpointerup=()=>isDrawing=false; canvas.onpointerout=()=>isDrawing=false;
+}
+function clearCanvas(show=true){ if(ctx){ ctx.clearRect(0,0,canvas.width,canvas.height); if(show) showModal('Pizarra limpia','Puedes comenzar de nuevo','green-500'); } }
+
+// --- PARTS VERIFICATION ---
+function checkParts(){
+  const answers = {
+    part1: 'Parte inmóvil que sirve como apoyo para la pieza',
+    part2: 'Parte que se mueve para apretar la pieza contra la fija',
+    part3: 'Varilla roscada que convierte giro en movimiento lineal para apretar',
+    part4: 'Estructura que soporta y ancla la prensa al banco de trabajo'
+  };
+  let score=0; const total=4;
+  for(const k in answers){ const v=document.getElementById(k).value.trim().toLowerCase(); if(v&& v.includes(answers[k].split(' ')[0])) score++; }
+  document.getElementById('parts-result').innerText=`Respuestas correctas aproximadas: ${score} / ${total}`;
+}
+
+// --- Modal ---
+function showModal(title,message,color){ const modal=document.createElement('div'); modal.className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'; modal.innerHTML=`<div class=\"bg-white p-6 rounded-lg max-w-md text-center\"><h3 class=\"font-bold text-xl mb-2\">${title}</h3><p class=\"mb-4\">${message}</p><button onclick=\"document.body.removeChild(this.parentElement.parentElement)\" class=\"bg-${color} text-white px-4 py-2 rounded\">Cerrar</button></div>`; document.body.appendChild(modal); }
+
+// Initialize default state
+window.addEventListener('load', ()=>{ document.querySelector('[data-target=home]').click(); initializeScenario(); initializeQuiz(); });
+</script>
+
+</body>
+</html>
